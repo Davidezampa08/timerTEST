@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer per mate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+           
+            const images = [
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg1.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg2.JPG",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg3.JPG",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg4.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg5.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg6.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg7.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg8.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg9.jpg",
+                "https://copaso.duckdns.org/~zampicinini-davide/timerfenzi/imgbg/bg10.jpg"
+            ];
+    
+            let currentIndex = 0;
+    
+            function changeBackground() {
+                
+                document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+    
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+    
+           
+            setInterval(changeBackground, 30000);
+    
+            changeBackground();
+        });
+    </script>
+
+    <div class="timer-container">
+        <label class="chiaro" for="duration">Imposta la durata (in secondi): </label>
+        <input  class="chiaro" type="number" id="duration" min="1" step="1" value="60">
+        <button class="chiaro" onclick="startTimer()" oneclick="">Avvia Timer</button>
+        <div id="timer">00:00</div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

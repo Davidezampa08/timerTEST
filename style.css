@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.timer-container {
+    text-align: center;
+}
+
+#timer {
+    font-size: 30em;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: ghostwhite;
+    opacity: 70%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background 1s ease;
+    height: 100vh;
+}
+.chiaro {
+    opacity: 40%;
+}
